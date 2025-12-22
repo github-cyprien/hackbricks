@@ -261,6 +261,8 @@ with open('extensions.csv', newline='') as csvExtensions:
                     #Generate preview
                     preview = command.replace(".stl", ".png", 1)
                     file.write(preview + "\n")  
+            # Create zip
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl/extensions && zip -r ../../zip/breakout-boards.stl.zip breakout-boards )" + "\n")                       
 
         if "gears" in rowExtensions['Name'] and (PartType == "" or PartType == "gears"):
             with open(rowExtensions['csv_file'], newline='') as csvfile:
@@ -277,7 +279,9 @@ with open('extensions.csv', newline='') as csvExtensions:
                     file.write(command + "\n")    
                     #Generate preview
                     preview = command.replace(".stl", ".png", 1)
-                    file.write(preview + "\n")                              
+                    file.write(preview + "\n")  
+            # Create zip
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl/extensions && zip -r ../../zip/gears.stl.zip gears )" + "\n")                                                  
 
 
                   
@@ -337,6 +341,10 @@ with open('extensions.csv', newline='') as csvExtensions:
                     file.write(preview + "\n")
                     #TODO : 1 image ? https://stackoverflow.com/questions/30227466/combine-several-images-horizontally-with-python
 
+        # Create zip
+        file.write("mkdir -p ./assets/zip && ( cd ./assets && zip -r ./zip/all.stl.zip stl)" + "\n")                                                  
+
+        
 
        
 
