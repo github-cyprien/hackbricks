@@ -116,7 +116,9 @@ with open('extensions.csv', newline='') as csvExtensions:
                     file.write(command + "\n") 
                     #Generate preview
                     preview = command.replace(".stl", ".png", 1)
-                    file.write(preview + "\n")    
+                    file.write(preview + "\n")
+            # Create zip
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/clips.stl.zip clips )" + "\n")                         
 
         if 'screw-nut' in rowExtensions['Name'] and (PartType == "" or PartType == "screw-nut"):
             print (csv.list_dialects())
