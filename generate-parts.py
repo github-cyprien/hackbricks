@@ -69,14 +69,17 @@ with open('extensions.csv', newline='') as csvExtensions:
                     stl += " -D model=" + quote + model + quote
                     stl += " -D length1=" + str(length1)
                     stl += " -D length2=" + str(length2)
-                    stl += " -D length3=" + str(length3)
+                    stl += " -D length3=" + str(length3)                    
                     #stl = "openscad -o ./stl/basic/{4} clip_and_block.scad -D model=\\\"{0}\\\" -D length1={1} -D length2={2} -D length3={3}".format(model, length1, length2, length3, filename)
                     file.write(stl + "\n")    
                     print(stl)
-
                     #Generate preview
                     preview = stl.replace(".stl", ".png", 1)
                     file.write(preview + "\n")  
+                                       
+
+            # Create zip
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/bricks.stl.zip bricks )" + "\n") 
 
         if 'clips' in rowExtensions['Name'] and (PartType == "" or PartType == "clips"):
             print (csv.list_dialects())
