@@ -193,7 +193,9 @@ with open('extensions.csv', newline='') as csvExtensions:
 
                     #Generate preview
                     preview = stl.replace(".stl", ".png", 1)
-                    file.write(preview + "\n")                     
+                    file.write(preview + "\n") 
+            # Create zip
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/plates.stl.zip plates )" + "\n")                                           
 
         if 'springs' in rowExtensions['Name'] and (PartType == "" or PartType == "springs"):
             print (csv.list_dialects())

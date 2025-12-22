@@ -1,12 +1,67 @@
-openscad -o ./assets/stl/extensions/tech/tech-4.stl ./extensions/tech.scad -D 'length=4;'
-openscad -o ./assets/stl/extensions/tech/tech-4.png ./extensions/tech.scad -D 'length=4;'
-openscad -o ./assets/stl/extensions/tech/tech-5.stl ./extensions/tech.scad -D 'length=5;'
-openscad -o ./assets/stl/extensions/tech/tech-5.png ./extensions/tech.scad -D 'length=5;'
-openscad -o ./assets/stl/extensions/tech/tech-7.stl ./extensions/tech.scad -D 'length=7;'
-openscad -o ./assets/stl/extensions/tech/tech-7.png ./extensions/tech.scad -D 'length=7;'
-openscad -o ./assets/stl/extensions/tech/tech-9.stl ./extensions/tech.scad -D 'length=9;'
-openscad -o ./assets/stl/extensions/tech/tech-9.png ./extensions/tech.scad -D 'length=9;'
-openscad -o ./assets/stl/extensions/tech/tech-11.stl ./extensions/tech.scad -D 'length=11;'
-openscad -o ./assets/stl/extensions/tech/tech-11.png ./extensions/tech.scad -D 'length=11;'
-openscad -o ./assets/stl/extensions/tech/tech-13.stl ./extensions/tech.scad -D 'length=13;'
-openscad -o ./assets/stl/extensions/tech/tech-13.png ./extensions/tech.scad -D 'length=13;'
+openscad -o ./assets/stl/extensions/plates/CP-5-4-2.stl clip_and_block.scad -D model=\"CP\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-5-4-2.png clip_and_block.scad -D model=\"CP\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-7-4-2.stl clip_and_block.scad -D model=\"CP\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-7-4-2.png clip_and_block.scad -D model=\"CP\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-9-4-2.stl clip_and_block.scad -D model=\"CP\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-9-4-2.png clip_and_block.scad -D model=\"CP\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-5-6-2.stl clip_and_block.scad -D model=\"CP\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-5-6-2.png clip_and_block.scad -D model=\"CP\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-7-6-2.stl clip_and_block.scad -D model=\"CP\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-7-6-2.png clip_and_block.scad -D model=\"CP\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-9-6-2.stl clip_and_block.scad -D model=\"CP\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CP-9-6-2.png clip_and_block.scad -D model=\"CP\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-5-4-2.stl clip_and_block.scad -D model=\"CPW\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-5-4-2.png clip_and_block.scad -D model=\"CPW\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-7-4-2.stl clip_and_block.scad -D model=\"CPW\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-7-4-2.png clip_and_block.scad -D model=\"CPW\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-9-4-2.stl clip_and_block.scad -D model=\"CPW\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-9-4-2.png clip_and_block.scad -D model=\"CPW\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-5-6-2.stl clip_and_block.scad -D model=\"CPW\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-5-6-2.png clip_and_block.scad -D model=\"CPW\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-7-6-2.stl clip_and_block.scad -D model=\"CPW\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-7-6-2.png clip_and_block.scad -D model=\"CPW\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-9-6-2.stl clip_and_block.scad -D model=\"CPW\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPW-9-6-2.png clip_and_block.scad -D model=\"CPW\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-5-4-2.stl clip_and_block.scad -D model=\"CPVW\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-5-4-2.png clip_and_block.scad -D model=\"CPVW\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-7-4-2.stl clip_and_block.scad -D model=\"CPVW\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-7-4-2.png clip_and_block.scad -D model=\"CPVW\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-9-4-2.stl clip_and_block.scad -D model=\"CPVW\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-9-4-2.png clip_and_block.scad -D model=\"CPVW\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-5-6-2.stl clip_and_block.scad -D model=\"CPVW\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-5-6-2.png clip_and_block.scad -D model=\"CPVW\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-7-6-2.stl clip_and_block.scad -D model=\"CPVW\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-7-6-2.png clip_and_block.scad -D model=\"CPVW\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-9-6-2.stl clip_and_block.scad -D model=\"CPVW\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPVW-9-6-2.png clip_and_block.scad -D model=\"CPVW\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-5-4-2.stl clip_and_block.scad -D model=\"CPV\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-5-4-2.png clip_and_block.scad -D model=\"CPV\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-7-4-2.stl clip_and_block.scad -D model=\"CPV\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-7-4-2.png clip_and_block.scad -D model=\"CPV\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-9-4-2.stl clip_and_block.scad -D model=\"CPV\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-9-4-2.png clip_and_block.scad -D model=\"CPV\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-5-6-2.stl clip_and_block.scad -D model=\"CPV\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-5-6-2.png clip_and_block.scad -D model=\"CPV\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-7-6-2.stl clip_and_block.scad -D model=\"CPV\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-7-6-2.png clip_and_block.scad -D model=\"CPV\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-9-6-2.stl clip_and_block.scad -D model=\"CPV\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPV-9-6-2.png clip_and_block.scad -D model=\"CPV\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-5-4-2-3.stl clip_and_block.scad -D model=\"CPC\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-5-4-2-3.png clip_and_block.scad -D model=\"CPC\" -D length1=5 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-7-4-2-3.stl clip_and_block.scad -D model=\"CPC\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-7-4-2-3.png clip_and_block.scad -D model=\"CPC\" -D length1=7 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-9-4-2-3.stl clip_and_block.scad -D model=\"CPC\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-9-4-2-3.png clip_and_block.scad -D model=\"CPC\" -D length1=9 -D length2=4 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-5-6-2-3.stl clip_and_block.scad -D model=\"CPC\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-5-6-2-3.png clip_and_block.scad -D model=\"CPC\" -D length1=5 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-7-6-2-3.stl clip_and_block.scad -D model=\"CPC\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-7-6-2-3.png clip_and_block.scad -D model=\"CPC\" -D length1=7 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-9-6-2-3.stl clip_and_block.scad -D model=\"CPC\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-9-6-2-3.png clip_and_block.scad -D model=\"CPC\" -D length1=9 -D length2=6 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-11-9-2-4.stl clip_and_block.scad -D model=\"CPC\" -D length1=11 -D length2=9 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-11-9-2-4.png clip_and_block.scad -D model=\"CPC\" -D length1=11 -D length2=9 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-13-9-2-4.stl clip_and_block.scad -D model=\"CPC\" -D length1=13 -D length2=9 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-13-9-2-4.png clip_and_block.scad -D model=\"CPC\" -D length1=13 -D length2=9 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-15-9-2-4.stl clip_and_block.scad -D model=\"CPC\" -D length1=15 -D length2=9 -D length3=2
+openscad -o ./assets/stl/extensions/plates/CPC-15-9-2-4.png clip_and_block.scad -D model=\"CPC\" -D length1=15 -D length2=9 -D length3=2
+mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/plates.stl.zip plates )
