@@ -1,0 +1,13 @@
+FileName;Options
+nut-easy;"'type=""nut""; head=""easy""'"
+nut-hex;"'type=""nut""; head=""hex""'"
+screw-easy-2;"'type=""screw""; head=""easy""; length=2'"
+screw-easy-3;"'type=""screw""; head=""easy""; length=3'"
+screw-easy-4;"'type=""screw""; head=""easy""; length=4'"
+screw-easy-5;"'type=""screw""; head=""easy""; length=5'"
+screw-easy-6;"'type=""screw""; head=""easy""; length=6'"
+screw-easy-8;"'type=""screw""; head=""easy""; length=8'"
+screw-slot-2;"'type=""screw""; head=""slot""; length=2'"
+screw-slot-3;"'type=""screw""; head=""slot""; length=3'"
+screw-slot-4;"'type=""screw""; head=""slot""; length=4'"
+screw-slot-5;"'type=""screw""; head=""slot""; length=5'"
