@@ -7,5 +7,5 @@ screw-nut;screw-nut.scad;screw-nut.csv;./assets/stl/screw-nut
 tech;./extensions/tech.scad;./extensions/tech.csv;./assets/stl/extensions/tech
 breakout-boards;breakout-boards.scad;breakout-boards.csv;./assets/stl/extensions/breakout-boards
 gears;gears_helical.scad;gears.csv;./assets/stl/extensions/gears
-springs;clip_and_block.scad;springs.csv;./assets/stl/extensions/springs
+springs;clip_and_block.scad;./extensions/springs.csv;./assets/stl/extensions/springs
 plates;clip_and_block.scad;./extensions/plates.csv;./assets/stl/extensions/plates

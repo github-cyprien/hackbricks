@@ -64,4 +64,4 @@ openscad -o ./assets/stl/extensions/plates/CPC-13-9-2-4.stl clip_and_block.scad 
 openscad -o ./assets/stl/extensions/plates/CPC-13-9-2-4.png clip_and_block.scad -D model=\"CPC\" -D length1=13 -D length2=9 -D length3=2
 openscad -o ./assets/stl/extensions/plates/CPC-15-9-2-4.stl clip_and_block.scad -D model=\"CPC\" -D length1=15 -D length2=9 -D length3=2
 openscad -o ./assets/stl/extensions/plates/CPC-15-9-2-4.png clip_and_block.scad -D model=\"CPC\" -D length1=15 -D length2=9 -D length3=2
-mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/plates.stl.zip plates )
+mkdir -p ./assets/zip && ( cd ./assets/stl/extensions && zip -r ../../zip/plates.stl.zip plates )

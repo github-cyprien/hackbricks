@@ -195,7 +195,7 @@ with open('extensions.csv', newline='') as csvExtensions:
                     preview = stl.replace(".stl", ".png", 1)
                     file.write(preview + "\n") 
             # Create zip
-            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/plates.stl.zip plates )" + "\n")                                           
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl/extensions && zip -r ../../zip/plates.stl.zip plates )" + "\n")                                           
 
         if 'springs' in rowExtensions['Name'] and (PartType == "" or PartType == "springs"):
             print (csv.list_dialects())
@@ -221,7 +221,9 @@ with open('extensions.csv', newline='') as csvExtensions:
 
                     #Generate preview
                     preview = stl.replace(".stl", ".png", 1)
-                    file.write(preview + "\n")                     
+                    file.write(preview + "\n")   
+            # Create zip
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl/extensions && zip -r ../../zip/tech.stl.zip tech )" + "\n")                                       
 
         if 'tech' in rowExtensions['Name'] and (PartType == "" or PartType == "tech"):
             print (csv.list_dialects())
@@ -241,7 +243,7 @@ with open('extensions.csv', newline='') as csvExtensions:
                     preview = command.replace(".stl", ".png", 1)
                     file.write(preview + "\n")  
             # Create zip
-            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/tech.stl.zip tech )" + "\n")                                                           
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl/extensions && zip -r ../../zip/tech.stl.zip tech )" + "\n")                                                           
                     
         if "breakout-boards" in rowExtensions['Name'] and (PartType == "" or PartType == "breakout-boards"):
             with open(rowExtensions['csv_file'], newline='') as csvfile:
@@ -278,32 +280,7 @@ with open('extensions.csv', newline='') as csvExtensions:
                     file.write(preview + "\n")                              
 
 
-        if 'lego' in rowExtensions['Name'] and (PartType == "" or PartType == "lego"):
-            print (csv.list_dialects())
-            with open(rowExtensions['csv_file'], newline='') as csvfile:
-                #Read csv file
-                dialect = csv.Sniffer().sniff(csvfile.read(2048), delimiters=";")   
-                csvfile.seek(0)
-                reader = csv.DictReader(csvfile, dialect=dialect)
-                
-                for row in reader:
-                    # Generate STL
-                    stl = "openscad -o " + rowExtensions['stl_directory'] + '/' + row['Filename'] + " " + rowExtensions['scad_file']
-                    stl += " -D model=" + quote + row['Model'] + quote
-                    stl += " -D width=" + row['width']
-                    stl += " -D length=" + row['length']
-                    stl += " -D height=" + row['height']
-                    stl += " -D width2=" + row['width2']
-                    stl += " -D length2=" + row['length2']
-                    stl += " -D holeArray=" + row['holeArray'] 
-                    print (stl)
-                    file.write(stl + "\n")
-
-                    #Generate preview
-                    preview = stl.replace(".stl", ".png", 1)
-                    #Preview in another directory
-                    #preview = preview.replace("electronic", "electronic/preview", 1) 
-                    file.write(preview + "\n")                    
+                  
 
         if 'spiralwheel' in rowExtensions['Name'] and (PartType == "" or PartType == "spiralwheel"):
             print (csv.list_dialects())
