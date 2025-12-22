@@ -2,7 +2,7 @@ Name;scad_file;csv_file;stl_directory
 bricks;clip_and_block.scad;bricks.csv;./assets/stl/bricks
 clips;clip.scad;clips.csv;./assets/stl/clips
 lockers;locker.scad;lockers.csv;./assets/stl/clips
-twist;clip_and_block.scad;twist.csv;./assets/stl/extensions/twist
+twist;clip_and_block.scad;twist.csv;./assets/stl/twist
 tech;tech.scad;tech.csv;./assets/stl/extensions/tech
 breakout-boards;breakout-boards.scad;breakout-boards.csv;./assets/stl/extensions/breakout-boards
 gears;gears_helical.scad;gears.csv;./assets/stl/extensions/gears
