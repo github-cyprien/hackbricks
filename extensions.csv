@@ -1,6 +1,6 @@
 Name;scad_file;csv_file;stl_directory
 bricks;clip_and_block.scad;bricks.csv;./assets/stl/bricks
-clips;clip.scad;clips.csv;./assets/stl/clips
+clips;clips.scad;clips.csv;./assets/stl/clips
 lockers;locker.scad;lockers.csv;./assets/stl/clips
 twist;clip_and_block.scad;twist.csv;./assets/stl/twist
 tech;tech.scad;tech.csv;./assets/stl/extensions/tech

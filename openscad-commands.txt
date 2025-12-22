@@ -1,31 +1,43 @@
-openscad -o ./assets/stl/twist/THE-2.stl clip_and_block.scad -D model=\"THE\" -D length1=2 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-2.png clip_and_block.scad -D model=\"THE\" -D length1=2 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-3.stl clip_and_block.scad -D model=\"THE\" -D length1=3 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-3.png clip_and_block.scad -D model=\"THE\" -D length1=3 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-5.stl clip_and_block.scad -D model=\"THE\" -D length1=5 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-5.png clip_and_block.scad -D model=\"THE\" -D length1=5 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-7.stl clip_and_block.scad -D model=\"THE\" -D length1=7 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-7.png clip_and_block.scad -D model=\"THE\" -D length1=7 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-9.stl clip_and_block.scad -D model=\"THE\" -D length1=9 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-9.png clip_and_block.scad -D model=\"THE\" -D length1=9 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-13.stl clip_and_block.scad -D model=\"THE\" -D length1=13 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-13.png clip_and_block.scad -D model=\"THE\" -D length1=13 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-17.stl clip_and_block.scad -D model=\"THE\" -D length1=17 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THE-17.png clip_and_block.scad -D model=\"THE\" -D length1=17 -D length2=1 -D length3=1
-openscad -o ./assets/stl/twist/THEL-3-2.stl clip_and_block.scad -D model=\"THEL\" -D length1=3 -D length2=2 -D length3=1
-openscad -o ./assets/stl/twist/THEL-3-2.png clip_and_block.scad -D model=\"THEL\" -D length1=3 -D length2=2 -D length3=1
-openscad -o ./assets/stl/twist/THEL-5-4.stl clip_and_block.scad -D model=\"THEL\" -D length1=5 -D length2=4 -D length3=1
-openscad -o ./assets/stl/twist/THEL-5-4.png clip_and_block.scad -D model=\"THEL\" -D length1=5 -D length2=4 -D length3=1
-openscad -o ./assets/stl/twist/THEL-5-2.stl clip_and_block.scad -D model=\"THEL\" -D length1=5 -D length2=2 -D length3=1
-openscad -o ./assets/stl/twist/THEL-5-2.png clip_and_block.scad -D model=\"THEL\" -D length1=5 -D length2=2 -D length3=1
-openscad -o ./assets/stl/twist/THEL-7-6.stl clip_and_block.scad -D model=\"THEL\" -D length1=7 -D length2=6 -D length3=1
-openscad -o ./assets/stl/twist/THEL-7-6.png clip_and_block.scad -D model=\"THEL\" -D length1=7 -D length2=6 -D length3=1
-openscad -o ./assets/stl/twist/THEL-7-2.stl clip_and_block.scad -D model=\"THEL\" -D length1=7 -D length2=2 -D length3=1
-openscad -o ./assets/stl/twist/THEL-7-2.png clip_and_block.scad -D model=\"THEL\" -D length1=7 -D length2=2 -D length3=1
-openscad -o ./assets/stl/twist/THEL-9-8.stl clip_and_block.scad -D model=\"THEL\" -D length1=9 -D length2=8 -D length3=1
-openscad -o ./assets/stl/twist/THEL-9-8.png clip_and_block.scad -D model=\"THEL\" -D length1=9 -D length2=8 -D length3=1
-openscad -o ./assets/stl/twist/THEL-9-2.stl clip_and_block.scad -D model=\"THEL\" -D length1=9 -D length2=2 -D length3=1
-openscad -o ./assets/stl/twist/THEL-9-2.png clip_and_block.scad -D model=\"THEL\" -D length1=9 -D length2=2 -D length3=1
-openscad -o ./assets/stl/twist/THEL-9-6.stl clip_and_block.scad -D model=\"THEL\" -D length1=9 -D length2=6 -D length3=1
-openscad -o ./assets/stl/twist/THEL-9-6.png clip_and_block.scad -D model=\"THEL\" -D length1=9 -D length2=6 -D length3=1
-mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/twist.stl.zip twist )
+openscad -o ./assets/stl/clips/clip-2.stl clips.scad -D 'locker=true; length=2; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-2.png clips.scad -D 'locker=true; length=2; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-3.stl clips.scad -D 'locker=true; length=3; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-3.png clips.scad -D 'locker=true; length=3; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-4.stl clips.scad -D 'locker=true; length=4; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-4.png clips.scad -D 'locker=true; length=4; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-5.stl clips.scad -D 'locker=true; length=5; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-5.png clips.scad -D 'locker=true; length=5; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-6.stl clips.scad -D 'locker=true; length=6; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-6.png clips.scad -D 'locker=true; length=6; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-7.stl clips.scad -D 'locker=true; length=7; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-7.png clips.scad -D 'locker=true; length=7; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-8.stl clips.scad -D 'locker=true; length=8; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-8.png clips.scad -D 'locker=true; length=8; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-2.stl clips.scad -D 'locker=false; length=2; h_base=0.6; M4=false'
+openscad -o ./assets/stl/clips/clip-a-2.png clips.scad -D 'locker=false; length=2; h_base=0.6; M4=false'
+openscad -o ./assets/stl/clips/clip-a-3.stl clips.scad -D 'locker=false; length=3; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-3.png clips.scad -D 'locker=false; length=3; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-4.stl clips.scad -D 'locker=false; length=4; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-4.png clips.scad -D 'locker=false; length=4; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-5.stl clips.scad -D 'locker=false; length=5; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-5.png clips.scad -D 'locker=false; length=5; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-6.stl clips.scad -D 'locker=false; length=6; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-6.png clips.scad -D 'locker=false; length=6; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-7.stl clips.scad -D 'locker=false; length=7; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-7.png clips.scad -D 'locker=false; length=7; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-8.stl clips.scad -D 'locker=false; length=8; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-a-8.png clips.scad -D 'locker=false; length=8; h_base=1.5; M4=false'
+openscad -o ./assets/stl/clips/clip-m4-2.stl clips.scad -D 'locker=false; length=2; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-2.png clips.scad -D 'locker=false; length=2; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-3.stl clips.scad -D 'locker=false; length=3; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-3.png clips.scad -D 'locker=false; length=3; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-4.stl clips.scad -D 'locker=false; length=4; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-4.png clips.scad -D 'locker=false; length=4; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-5.stl clips.scad -D 'locker=false; length=5; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-5.png clips.scad -D 'locker=false; length=5; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-6.stl clips.scad -D 'locker=false; length=6; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-6.png clips.scad -D 'locker=false; length=6; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-7.stl clips.scad -D 'locker=false; length=7; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-7.png clips.scad -D 'locker=false; length=7; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-8.stl clips.scad -D 'locker=false; length=8; h_base=1.5; M4=true'
+openscad -o ./assets/stl/clips/clip-m4-8.png clips.scad -D 'locker=false; length=8; h_base=1.5; M4=true'
+mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/clips.stl.zip clips )
