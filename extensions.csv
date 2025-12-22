@@ -3,9 +3,9 @@ bricks;clip_and_block.scad;bricks.csv;./assets/stl/bricks
 clips;clips.scad;clips.csv;./assets/stl/clips
 lockers;locker.scad;lockers.csv;./assets/stl/clips
 twist;clip_and_block.scad;twist.csv;./assets/stl/twist
-tech;tech.scad;tech.csv;./assets/stl/extensions/tech
+screw-nut;screw-nut.scad;screw-nut.csv;./assets/stl/screw-nut
+tech;./extensions/tech.scad;./extensions/tech.csv;./assets/stl/extensions/tech
 breakout-boards;breakout-boards.scad;breakout-boards.csv;./assets/stl/extensions/breakout-boards
 gears;gears_helical.scad;gears.csv;./assets/stl/extensions/gears
 springs;clip_and_block.scad;springs.csv;./assets/stl/extensions/springs
 plates;clip_and_block.scad;plates.csv;./assets/stl/extensions/plates
-screw-nut;screw-nut.scad;screw-nut.csv;./assets/stl/screw-nut

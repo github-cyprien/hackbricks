@@ -237,7 +237,9 @@ with open('extensions.csv', newline='') as csvExtensions:
                     file.write(command + "\n")    
                     #Generate preview
                     preview = command.replace(".stl", ".png", 1)
-                    file.write(preview + "\n")                                      
+                    file.write(preview + "\n")  
+            # Create zip
+            file.write("mkdir -p ./assets/zip && ( cd ./assets/stl && zip -r ../zip/tech.stl.zip tech )" + "\n")                                                           
                     
         if "breakout-boards" in rowExtensions['Name'] and (PartType == "" or PartType == "breakout-boards"):
             with open(rowExtensions['csv_file'], newline='') as csvfile:
