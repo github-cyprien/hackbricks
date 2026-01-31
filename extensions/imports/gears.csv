@@ -1,8 +1,0 @@
-FileName;Options
-gears-16;"'type1=""spur""; tooth1=16; holeArray=0'"
-gears-32;"'type1=""spur""; tooth1=32; holeArray=1'"
-gears-48;"'type1=""spur""; tooth1=48; holeArray=2'"
-gears-64;"'type1=""spur""; tooth1=64; holeArray=3'"
-gears-32-16;"'type1=""spur""; tooth1=32; type2=""spur""; tooth2=16; holeArray=0'"
-gears-48-16;"'type1=""spur""; tooth1=48; type2=""spur""; tooth2=16; holeArray=0'"
-gears-64-16;"'type1=""spur""; tooth1=64; type2=""spur""; tooth2=16; holeArray=0'"

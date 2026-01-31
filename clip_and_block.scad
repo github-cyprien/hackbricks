@@ -1,5 +1,5 @@
 size =8;
-model="SP";
+model="F";
 
 length1=2;
 length2=4;
@@ -8,9 +8,9 @@ length4=3;
 options="";
 
 
-filename="sg90-4x1.stl";
+filename="./extensions/imports/sg90-2x1.stl";
 
-holeArray=[[-1,0,0],[-1,1,0],[4,0,0],[4,1,0]];
+holeArray=[[-1,0,0],[-1,1,0],[-1,-1,0],[-1,2,0],[0,-1,0],[0,2,0],[1,-1,0],[1,2,0],[-1,0,1],[-1,1,1],[-1,-1,1],[-1,2,1],[0,-1,1],[0,2,1],[1,-1,1],[1,2,1]];
 
 finalRotate=[0,0,0];
 finalMirror=[0,0,0];
@@ -312,7 +312,7 @@ mirror([finalMirror[0], finalMirror[1], finalMirror[2]]) {
     
     // Model F => File
     if (model == "F") {
-        import(str("imports/",filename));
+        import(str(filename));
         if (len(holeArray) > 0) {
         for(i= [0 : len(holeArray) - 1]) // rows
         {
@@ -327,7 +327,7 @@ mirror([finalMirror[0], finalMirror[1], finalMirror[2]]) {
 
     // Model FH => File Half (Half height
     if (model == "FH") {
-        import(str("imports/",filename));
+        import(str(filename));
         if (len(holeArray) > 0) {
         for(i= [0 : len(holeArray) - 1]) // rows
         {

@@ -3,7 +3,7 @@ include <BOSL2/threading.scad>
 
 size=8;
 length=2;
-type="screw"; // screw, nut
+type="nut"; // screw, nut
 head="easy"; // hex,slot,easy,easy-slim
 
 
@@ -51,7 +51,7 @@ if (type=="nut" && head=="easy") {
         translate([0,0,2])
             threaded_nut(shape="square", nutwidth=7, id=5.7, h=4, pitch=1.25, bevel=false, $slop=0.1, $fa=1, $fs=1);
         difference() {
-            import("imports/easy-head-9.stl");
+            import("imports/easy-head.stl");
             cylinder(h=4, r=3.5, $fn=64);
             //threaded_rod(d=5.4, l=length*size/2+5, pitch=1.25, $fa=1, $fs=1);
         }        

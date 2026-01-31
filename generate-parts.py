@@ -314,14 +314,17 @@ with open('extensions.csv', newline='') as csvExtensions:
                     #preview = preview.replace("electronic", "electronic/preview", 1) 
                     file.write(preview + "\n")                    
 
-        if "import-parts" in rowExtensions['Name'] and (PartType == "" or PartType == "import-parts"):
+        if "motors" in rowExtensions['Name'] and (PartType == "" or PartType == "motors"):
+            print (csv.list_dialects())
             with open(rowExtensions['csv_file'], newline='') as csvfile:
                 #Read csv file
                 dialect = csv.Sniffer().sniff(csvfile.read(2048), delimiters=";")   
                 csvfile.seek(0)
                 reader = csv.DictReader(csvfile, dialect=dialect)
-
+                print (rowExtensions)
+                
                 for row in reader:
+                    print (row)
                     if not os.path.exists(rowExtensions['stl_directory'] + '/' + row['Directory']):
                         os.makedirs(rowExtensions['stl_directory'] + '/' + row['Directory'])                    
                     # Generate STL
@@ -339,10 +342,9 @@ with open('extensions.csv', newline='') as csvExtensions:
                     #Preview in another directory
                     #preview = preview.replace("electronic", "electronic/preview", 1) 
                     file.write(preview + "\n")
-                    #TODO : 1 image ? https://stackoverflow.com/questions/30227466/combine-several-images-horizontally-with-python
 
         # Create zip
-        file.write("mkdir -p ./assets/zip && ( cd ./assets && zip -r ./zip/all.stl.zip stl)" + "\n")                                                  
+        # file.write("mkdir -p ./assets/zip && ( cd ./assets && zip -r ./zip/all.stl.zip stl)" + "\n")                                                  
 
         
 
