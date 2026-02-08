@@ -1,5 +1,5 @@
 size =8;
-model="F";
+model="IN";
 
 length1=2;
 length2=4;
@@ -17,6 +17,10 @@ finalMirror=[0,0,0];
 
 rounded = true;
 
+
+include <BOSL2/std.scad>
+include <BOSL2/threading.scad>
+
 rotate([finalRotate[0], finalRotate[1], finalRotate[2]]) {
 mirror([finalMirror[0], finalMirror[1], finalMirror[2]]) {    
     // Model I
@@ -26,6 +30,15 @@ mirror([finalMirror[0], finalMirror[1], finalMirror[2]]) {
             translate([0,x*size,0]) holeCube();
         }
     }
+
+    // Model IN
+    if (model == "IN") {
+        for (x = [0:length1-1]) {
+            echo (x);
+            translate([0,x*size,0]) holeCubeNut();
+        }
+    }
+
 
     // Model IR (Rounded)
     if (model == "IR") {
@@ -587,11 +600,82 @@ mirror([finalMirror[0], finalMirror[1], finalMirror[2]]) {
 }//finalMirror
 }//finalRotate
 
+module holeCubeNut (size = 8, height_ratio = 0.5, d_outer = 6.8, d_inner = 5.2, r_edge = 0.4, flat_length = 4, centered = false) {
+    
+    // Calcul de la hauteur en fonction du ratio
+    height = size * height_ratio;
+    
+    // Module pour créer le modèle centré
+    module centered_model() {
+        difference() {
+            union() {
+                // Cube avec toutes les arêtes arrondies (centré)
+                minkowski() {
+                    cube([size-2*r_edge, size-2*r_edge, height-2*r_edge], center=true);
+                    sphere(r=r_edge, $fn=30);
+                }
+                
+                // Ajout des rectangles plats au centre de chaque arête
+                
+                // Arêtes horizontales sur le plan XY bas (z=-height/2)
+                translate([0, -(size/2-r_edge/2), -(height/2-r_edge/2)])
+                    cube([flat_length, r_edge, r_edge], center=true);
+                translate([-(size/2-r_edge/2), 0, -(height/2-r_edge/2)])
+                    cube([r_edge, flat_length, r_edge], center=true);
+                translate([0, (size/2-r_edge/2), -(height/2-r_edge/2)])
+                    cube([flat_length, r_edge, r_edge], center=true);
+                translate([(size/2-r_edge/2), 0, -(height/2-r_edge/2)])
+                    cube([r_edge, flat_length, r_edge], center=true);
+                
+                // Arêtes horizontales sur le plan XY haut (z=height/2)
+                translate([0, -(size/2-r_edge/2), (height/2-r_edge/2)])
+                    cube([flat_length, r_edge, r_edge], center=true);
+                translate([-(size/2-r_edge/2), 0, (height/2-r_edge/2)])
+                    cube([r_edge, flat_length, r_edge], center=true);
+                translate([0, (size/2-r_edge/2), (height/2-r_edge/2)])
+                    cube([flat_length, r_edge, r_edge], center=true);
+                translate([(size/2-r_edge/2), 0, (height/2-r_edge/2)])
+                    cube([r_edge, flat_length, r_edge], center=true);
+                
+                // Arêtes verticales
+                translate([-(size/2-r_edge/2), -(size/2-r_edge/2), 0])
+                    cube([r_edge, r_edge, flat_length/2], center=true);
+                translate([(size/2-r_edge/2), -(size/2-r_edge/2), 0])
+                    cube([r_edge, r_edge, flat_length/2], center=true);
+                translate([-(size/2-r_edge/2), (size/2-r_edge/2), 0])
+                    cube([r_edge, r_edge, flat_length/2], center=true);
+                translate([(size/2-r_edge/2), (size/2-r_edge/2), 0])
+                    cube([r_edge, r_edge, flat_length/2], center=true);
+            }
+            
+            // Nut hole
+            union() {
+                threaded_rod(
+                    d = 5.5,        // diamètre "dans le vide" (id)
+                    l = 4,          // hauteur du filetage
+                    pitch = 1.25,
+                    internal = true,
+                    $slop = 0.1, $fn=64
+                );
+            }
+        }
+    }
+    
+    // Choix entre centré ou coin à l'origine selon le paramètre
+    if (centered) {
+        centered_model();
+    } else {
+        // Translation pour placer le coin à l'origine
+        translate([size/2, size/2, height/2]) {
+            centered_model();
+        }
+    }
+    
+}
 
 // Fonction hole_cube qui crée un cube avec un trou conique au centre
 // et des arêtes arrondies sauf au centre de chaque arête
-module holeCube(size = 8, height_ratio = 0.5, d_outer = 6.8, d_inner = 5.2, 
-                r_edge = 0.4, flat_length = 4, centered = false) {
+module holeCube(size = 8, height_ratio = 0.5, d_outer = 6.8, d_inner = 5.2, r_edge = 0.4, flat_length = 4, centered = false) {
     
     // Calcul de la hauteur en fonction du ratio
     height = size * height_ratio;

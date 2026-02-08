@@ -344,7 +344,7 @@ with open('extensions.csv', newline='') as csvExtensions:
                     file.write(preview + "\n")
 
         # Create zip
-        # file.write("mkdir -p ./assets/zip && ( cd ./assets && zip -r ./zip/all.stl.zip stl)" + "\n")                                                  
+        file.write("mkdir -p ./assets/zip && ( cd ./assets && zip -r ./zip/all.stl.zip stl)" + "\n")                                                  
 
         
 

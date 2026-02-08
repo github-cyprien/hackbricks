@@ -30,7 +30,7 @@ if (type=="screw") {
                     cylinder(h=2, d2=6.8, d1=5.2, $fn=64);
                 // tête facile à visser
                 translate([0, 0, 1.5])
-                    import("imports/easy-head.stl");
+                    import("imports/easy-head-9.5.stl");
             }
             if (head=="easy-slim")  {
                 // tête conique
@@ -44,18 +44,37 @@ if (type=="screw") {
 }
 
 if(type=="nut" && head=="hex")
-    threaded_nut(nutwidth=8, id=5.7, h=4, pitch=1.25, bevel=false, $slop=0.1, $fa=1, $fs=1);
+    threaded_nut(nutwidth=8, id=5.5, h=4, pitch=1.25, bevel=false, $slop=0.1, $fa=1, $fs=1);
 
 if (type=="nut" && head=="easy") {
+$fa=1;
+$fs=1;
+
+difference() {
+    import("imports/easy-head-9.5.stl");
+
+    // Taraudage (outil de coupe)
+    translate([0,0,2])   // ajuste si ton STL n'est pas centré
+        threaded_rod(
+            d = 5.5,        // diamètre "dans le vide" (id)
+            l = 4,          // hauteur du filetage
+            pitch = 1.25,
+            internal = true,
+            $slop = 0.1
+        );
+}
+    
+    /*
     union() {    
         translate([0,0,2])
-            threaded_nut(shape="square", nutwidth=7, id=5.7, h=4, pitch=1.25, bevel=false, $slop=0.1, $fa=1, $fs=1);
+            threaded_nut(shape="square", nutwidth=7, id=5.7, h=4, pitch=1.25, bevel=false, $slop=0.1, $fa=1, $fs=1); // Test 5.5 / 5.7
         difference() {
-            import("imports/easy-head.stl");
+            import("imports/easy-head-9.stl");
             cylinder(h=4, r=3.5, $fn=64);
             //threaded_rod(d=5.4, l=length*size/2+5, pitch=1.25, $fa=1, $fs=1);
         }        
     }
+    */
 }
 
 
